@@ -24,4 +24,8 @@ public class ProductService {
 	public Product getProductById(int id) {
 		return this.productDao.getProductById(id);
 	}
+	
+	public List<Product> getProductByCategory(String category){
+		return this.productDao.getProductByCategory(category);
+	}
 }

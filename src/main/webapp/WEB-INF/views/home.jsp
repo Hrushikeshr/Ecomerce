@@ -76,7 +76,7 @@
             <div class="col-lg-3 col-6 text-right">
                 <a href="cart" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
+                    <span class="badge">cart</span>
                 </a>
             </div>
         </div>
@@ -94,9 +94,9 @@
                 </a>
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 110px">
-                        <a href="shop" class="dropdown-item">Men's Dresses</a>
-                        <a href="shop" class="dropdown-item">Women's Dresses</a>
-                        <a href="shop" class="dropdown-item">Baby's Dresses</a>
+                        <a href="<c:url value="/menproduct " />" class="dropdown-item">Men's Dresses</a>
+                        <a href="<c:url value="/womenproduct " />" class="dropdown-item">Women's Dresses</a>
+                        <a href="<c:url value="/babyproduct " />" class="dropdown-item">Baby's Dresses</a>
                     </div>
                 </nav>
             </div>
@@ -116,7 +116,7 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="cart" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout" class="dropdown-item">Checkout</a>
+                                    <a href="<c:url value="/showcheck " />" class="dropdown-item">My Order</a>
                                 </div>
                             </div>
                             <a href="help" class="nav-item nav-link">Contact</a>
@@ -127,13 +127,13 @@
                         <% 
                         if(name!=null){
                         %>
-                           <a href="login" class="nav-item nav-link">Hey <%out.print(name); %></a>
-                           <a href="logout" class="nav-item nav-link">Logout</a>
+                           <a href="<c:url value="/home" />" class="nav-item nav-link">Hey <%out.print(name); %></a>
+                           <a href="<c:url value="/logout" />" class="nav-item nav-link">Logout</a>
                         <%
                         }else{
                         %>
-                        	<a href="login" class="nav-item nav-link">Login</a>
-                        	<a href="registration" class="nav-item nav-link">Register</a>
+                        	<a href="<c:url value="/login" />" class="nav-item nav-link">Login</a>
+                        	<a href="<c:url value="/registration" />" class="nav-item nav-link">Register</a>
                         <%}%> 
                         </div>
                     </div>
@@ -210,43 +210,6 @@
     </div>
     <!-- Featured End -->
 
-
-    <!-- Categories Start -->
-    <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<c:url value="/resources/img/cat-1.jpg" />" alt="image">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Men's dresses</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        <img class="img-fluid" src="<c:url value="/resources/img/cat-2.jpg" />" alt="image">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Women's dresses</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<c:url value="/resources/img/cat-3.jpg" />" alt="image">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Baby's dresses</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Categories End -->
-
-
     <!-- Offer Start -->
     <div class="container-fluid offer pt-5">
         <div class="row px-xl-5">
@@ -256,7 +219,7 @@
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                        <a href="<c:url value="/shop" />" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -266,7 +229,7 @@
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                        <a href="<c:url value="/shop" />" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
                     </div>
                 </div>
             </div>

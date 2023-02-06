@@ -56,12 +56,12 @@
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="username" id="username"
-									placeholder="Your Name" />
+									placeholder="Your Email" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
 									type="password" name="password" id="password"
-									placeholder="Password" />
+									placeholder="Password" required="required"/>
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="remember-me" id="remember-me"
@@ -83,20 +83,7 @@
 	   
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-	<!-- JS -->
-	<!-- 	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
-	<script type="text/javascript">
-	    var status = document.getElementById("status").value;
-	    
-		if(status == "faield"){
-			swal("Sorry", "Wrong Username or Password", "faield");
-		}
-	</script> -->
+	
 </body>
-<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

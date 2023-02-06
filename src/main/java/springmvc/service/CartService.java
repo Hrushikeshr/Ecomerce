@@ -22,20 +22,22 @@ public class CartService {
 		return this.cartDao.getCarts();
 	}
 	
-	public void delete(int id) {
-		this.cartDao.deleteCart(id);
+	public void delete(CartProduct cartProduct) {
+		this.cartDao.deleteCart(cartProduct);
 	}
 	
 	public CartProduct getCartProductById(int id) {
 		return this.cartDao.getCartById(id);
 	}
-	
-	public void deletAll() {
-		this.cartDao.deleAll();
-	}
-	
-	
+
 	public void updateById(int id, int quantity) {
 		this.cartDao.updateById(id, quantity);
+	}
+	
+	public List<CartProduct> getCartsByUserId(int userId){
+		return this.cartDao.getCartsByUserId(userId);
+	}
+	public void deleteAll(int userId) {
+		this.cartDao.deleteAll(userId);
 	}
 }

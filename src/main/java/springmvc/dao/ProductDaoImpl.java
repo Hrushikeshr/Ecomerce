@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -15,6 +18,9 @@ public class ProductDaoImpl implements ProductDao{
 
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
+	
+	@Autowired
+	private SessionFactory sessionFactory;
 
 	// create
 	@Transactional
@@ -39,6 +45,17 @@ public class ProductDaoImpl implements ProductDao{
 	@Override
 	public Product getProductById(int pid) {
 		return this.hibernateTemplate.get(Product.class, pid);
+	}
+
+	@Transactional
+	@Override
+	public List<Product> getProductByCategory(String category) {
+		Session session = sessionFactory.getCurrentSession();
+		@SuppressWarnings("unchecked")
+		Query<Product> query = session.createQuery("from Product where category =: category");
+		query.setParameter("category", category);
+		session.flush();
+		return query.getResultList();
 	}
 	
 }

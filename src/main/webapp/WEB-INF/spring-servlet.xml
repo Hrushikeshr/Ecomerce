@@ -68,6 +68,7 @@
 				<value>springmvc.entity.UserData</value>
 				<value>springmvc.entity.Product</value>
 				<value>springmvc.entity.CartProduct</value>
+				<value>springmvc.entity.OrderProduct</value>
 			</list>
 		</property>
 

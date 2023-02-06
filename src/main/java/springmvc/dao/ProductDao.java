@@ -9,7 +9,6 @@ public interface ProductDao {
 	public List<Product> getProducts();
 	public void deleteProduct(int pid);
 	public Product getProductById(int pid);
-	
-		
+	public List<Product> getProductByCategory(String category);
 	
 }

@@ -13,7 +13,7 @@ public class UserData {
 		private String name;
 		private String email;
 		private String pass;
-		private int contact;
+		private long contact;
 		public int getId() {
 			return id;
 		}
@@ -38,13 +38,13 @@ public class UserData {
 		public void setPass(String pass) {
 			this.pass = pass;
 		}
-		public int getContact() {
+		public long getContact() {
 			return contact;
 		}
-		public void setContact(int contact) {
+		public void setContact(long contact) {
 			this.contact = contact;
 		}
-		public UserData(int id, String name, String email, String pass, int contact) {
+		public UserData(int id, String name, String email, String pass, long contact) {
 			super();
 			this.id = id;
 			this.name = name;

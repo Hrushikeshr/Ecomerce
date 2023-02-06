@@ -64,7 +64,7 @@
             <div class="col-lg-3 col-6 text-right">
                 <a href="cart" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
+                    <span class="badge">cart</span>
                 </a>
             </div>
         </div>
@@ -82,9 +82,9 @@
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                     < <div class="navbar-nav w-100 overflow-hidden" style="height: 110px">
-                        <a href="" class="dropdown-item">Men's Dresses</a>
-                        <a href="" class="dropdown-item">Women's Dresses</a>
-                        <a href="" class="dropdown-item">Baby's Dresses</a>
+                        <a href="<c:url value="/menproduct " />" class="dropdown-item">Men's Dresses</a>
+                        <a href="<c:url value="/womenproduct " />" class="dropdown-item">Women's Dresses</a>
+                        <a href="<c:url value="/babyproduct " />" class="dropdown-item">Baby's Dresses</a>
                     </div>
                 </nav>
             </div>
@@ -99,12 +99,12 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="/SpringMvc" class="nav-item nav-link active">Home</a>
-                            <a href="shop" class="nav-item nav-link">Shop</a>
+                            <a href="<c:url value="/shop" />" class="nav-item nav-link">Shop</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout" class="dropdown-item">Checkout</a>
+                                    <a href=" <c:url value="/cart" />" class="dropdown-item">Shopping Cart</a>
+                                    <a href="<c:url value="/checkout" />" class="dropdown-item">My Order</a>
                                 </div>
                             </div>
                             <a href="help" class="nav-item nav-link">Contact</a>
@@ -113,13 +113,13 @@
                         <% 
                         if(name!=null){
                         %>
-                           <a href="login" class="nav-item nav-link">Hey <%out.print(name); %></a>
+                           <a href="<c:url value="/home" />" class="nav-item nav-link">Hey <%out.print(name); %></a>
                            <a href="<c:url value="/logout" />" class="nav-item nav-link">Logout</a>
                         <%
                         }else{
                         %>
-                        	<a href="login" class="nav-item nav-link">Login</a>
-                        	<a href="registration" class="nav-item nav-link">Register</a>
+                        	<a href=" <c:url value="/login" />" class="nav-item nav-link">Login</a>
+                        	<a href=" <c:url value="/registration" />" class="nav-item nav-link">Register</a>
                         <%}%> 
                         </div>
                     </div>

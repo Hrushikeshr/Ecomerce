@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import springmvc.entity.Product;
 import springmvc.entity.UserData;
-import springmvc.service.CartService;
 import springmvc.service.ProductService;
 import springmvc.service.UserService;
 
@@ -37,9 +36,6 @@ public class HomeController {
 	@Autowired
 	private HttpServletRequest request;
 	
-	@Autowired
-	private CartService cartService;
-	
 	
 	//url controller for loading page 
 	@RequestMapping("/")
@@ -52,12 +48,6 @@ public class HomeController {
 	public String myHome() {
 		System.out.println("This home url");
 		return "home";
-	}
-	
-	@RequestMapping("/checkout")
-	public String checkout() {
-		System.out.println("Hello This is checkout url");
-		return "checkout";
 	}
 	
 	@RequestMapping("/help")
@@ -95,7 +85,7 @@ public class HomeController {
 	
 	//Mapping for data transform
 	
-	@PostMapping(path = "/signupp")
+	@PostMapping(path = "/signupp" )
 	public String signup(@ModelAttribute UserData userData,Model m) {
 		
 		System.out.println(userData);
