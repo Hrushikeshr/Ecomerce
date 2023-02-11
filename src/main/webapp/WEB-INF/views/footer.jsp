@@ -69,7 +69,7 @@
                 <p class="mb-md-0 text-center text-md-left text-dark">
                     &copy; <a class="text-dark font-weight-semi-bold" href="#">EShopper</a>. All Rights Reserved. Designed
                     by
-                    <a class="text-dark font-weight-semi-bold" href="https://htmlcodex.com">Hrushikesh</a>
+                    <a class="text-dark font-weight-semi-bold" href="">Hrushikesh</a>
                 </p>
             </div>
             <div class="col-md-6 px-xl-0 text-center text-md-right">
